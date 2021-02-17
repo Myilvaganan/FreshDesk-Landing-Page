@@ -101,7 +101,22 @@
     justify-content: space-around;
 }
 
+.tickets{
+    display: flex;
+    justify-content: space-between;
+    align-content: flex-start;
+    margin: 25px;
+}
+.ticket-list{
+    display: none;
+    margin: 20px;
+}
 
+.table {
+    margin-top: 25px;
+    border: 2px solid #155e54;
+    border-top: 2px solid #155e54;
+}
 
 .title h1{
     margin-top: 20px;
