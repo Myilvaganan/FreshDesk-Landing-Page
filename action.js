@@ -37,6 +37,10 @@ showTickets.addEventListener('click',()=> {
 
     async function freshdesk(){
         try{
+
+           
+
+
             let domain_Name= 'newaccount1613468278935';
             let API_KEY= 'y5JVEbmxXd48bwvsEbrr';
             let url = `https://${domain_Name}.freshdesk.com/api/v2/tickets/`;
@@ -61,39 +65,68 @@ showTickets.addEventListener('click',()=> {
                               data[i].subject
                             ]);
                 }
-        
-             console.log(data);
-            console.log(arr); 
-        
+    
+            let classChange = document.querySelector('.ticket-list');
+            classChange.style.display = 'flex';
             
             for(let i=0; i<arr.length;i++){
 
-                const tickets = document.createElement('div');
-      
-                    const subject = document.createElement('p');
-                    subject.innerText = ` Person ${i+1} : Subject: ${arr[i][4]}`;
+                var row = document.createElement('tr');
+                row.setAttribute("class","table-row");
+                var rowHead = document.createElement('th');
+                var rowData1 = document.createElement('td');
+                var rowData2 = document.createElement('td');
+                var rowData3 = document.createElement('td');
+                var rowData4 = document.createElement('td');
 
-                    const status = document.createElement('p');
+               
+                    rowHead.innerText= `${arr[i][0]}`
+                    rowData1.innerText = `${arr[i][4]}`;
+
+                    
 
                     if(arr[i][1] == '2')
                     {
-                        status.innerText= 'Status: Open';
+                       rowData3.innerText= 'Open';
                     }else if(arr[i][1] == '3'){
-                        status.innerText= 'Status: Pending';
+                        rowData3.innerText= 'Pending';
                     }else if(arr[i][1] == '4'){
-                        status.innerText= 'Status: Resolved';
+                        rowData3.innerText= 'Resolved';
                     }else if(arr[i][1] == '5'){
-                        status.innerText = 'Status: Closed'
+                        rowData3.innerText = 'Closed'
                     }
 
-                    const priority = document.createElement('p');
-                    priority.innerText = `Subject: ${arr[i][2]}`;
+                    if(arr[i][2] == '1')
+                    {
+                        rowData4.innerText= 'Low';
+                    }else if(arr[i][2] == '2'){
+                        rowData4.innerText= 'Medium';
+                    }else if(arr[i][2] == '3'){
+                        rowData4.innerText= 'High';
+                    }else if(arr[i][2] == '4'){
+                        rowData4.innerText = 'Urgent'
+                    }
 
-                    const source = document.createElement('p');
-                    source.innerText = `Subject: ${arr[i][3]}`;
-                     tickets.append(subject, status, priority, source)
+                 
+                    if(arr[i][3] == '1')
+                    {
+                        rowData2.innerText= 'Email';
+                    }else if(arr[i][3] == '2'){
+                        rowData2.innerText= 'Portal';
+                    }else if(arr[i][3] == '3'){
+                        rowData2.innerText= 'Phone';
+                    }else if(arr[i][3] == '7'){
+                        rowData2.innerText = 'Chat'
+                    }else if(arr[i][3] == '9'){
+                        rowData2.innerText = 'Feedback Widget'
+                    }else if(arr[i][3] == '10'){
+                        rowData2.innerText = 'Outbound Mail'
+                    }
 
-                document.querySelector('.ticket-list').append(tickets);
+                    row.append(rowHead,rowData1,rowData2,rowData3,rowData4);
+                    
+
+                document.querySelector('.table-body').append(row);
             }
  
 
@@ -105,6 +138,3 @@ showTickets.addEventListener('click',()=> {
 
     freshdesk();
 })
-
-
-
