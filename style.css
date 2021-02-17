@@ -2,17 +2,37 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;0,900;1,400&display=swap');
 
-*{
+
+@media only screen and (max-width: 600px) {
+    .offer {
+        display: none;
+    }
+
+    .content-up {
+        display: flex;
+        justify-content: space-evenly;
+        align-content: center;
+    }
+
+    .content-up .logo img {
+        width: 150px;
+        height: 55px;
+    }
+}
+
+
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: 'Kulim Park', Helvetica, sans-serif;
 }
 
-.header{
+.header {
     background-color: #155e54;
     color: #fff;
     height: 75vh;
+    margin-bottom: 0;
 }
 
 .content-up {
@@ -26,15 +46,14 @@
     z-index: 1;
 }
 
-.nav-scroll-bg-change{
+.nav-scroll-bg-change {
     background-color: white;
     height: 10vh;
-
 }
 
-.btn{
+.btn {
     font-family: 'Roboto',
-    sans-serif ;
+        sans-serif;
     letter-spacing: 1.5px !important;
     background-color: rgb(37, 193, 111) !important;
     color: white !important;
@@ -44,39 +63,42 @@
     width: 138px;
     height: 25px;
 }
-.content-up .logo, .content-up .offer{
+
+.content-up .logo,
+.content-up .offer {
     margin: 60px 100px;
 }
 
-.content-up button{
+.content-up button {
     padding: 5px 15px;
     width: 200px;
 }
 
-.content-down{
+.content-down {
     display: flex;
     justify-content: center;
     text-align: center;
     align-content: center;
     position: relative;
-    top:23vh;
+    top: 23vh;
     background-color: #155e54;
-    
+
 }
 
-.text{
+.text {
     margin-top: 35px;
 }
 
-.text p{
+.text p {
     font-size: 1.2rem;
     font-weight: 400;
 }
 
-.text h1{
+.text h1 {
     font-size: 3rem;
     font-weight: 600;
 }
+
 .content-down button {
     margin-top: 20px;
     padding: 10px 15px;
@@ -84,27 +106,21 @@
     letter-spacing: 0.1rem;
 }
 
-.sectionOne{
+.sectionOne {
     text-align: center;
-    width: 100%;
     margin: 0 auto;
     min-height: 700px;
     background-color: #f3fcf7;
+
 }
 
-.sectionOne .button{
-    margin-top: 40px;
+.sectionOne .button {
+    padding-top: 40px;
     display: flex;
     justify-content: space-around;
 }
 
-.tickets{
-    display: flex;
-    justify-content: space-between;
-    align-content: flex-start;
-    margin: 25px;
-}
-.ticket-list{
+.ticket-list {
     display: none;
     margin: 20px;
 }
@@ -115,42 +131,45 @@
     border-top: 2px solid #155e54;
 }
 
-.title h1{
+.title h1 {
     padding-top: 40px;
     font-size: 2rem;
     font-weight: 700;
- }
-
-.sectionTwo{
-    width: 100%;
-    margin-bottom: 100px;
-    
 }
 
-.sectionTwo .btn{
+.sectionTwo {
+    width: 100%;
+    margin-bottom: 100px;
+
+}
+
+.sectionTwo .btn {
     position: relative;
     left: 50%;
     transform: translateX(-50%);
     padding: 10px 20px;
 }
 
-.sectionTwo-content h1, p{
+.sectionTwo-content h1,
+p {
     display: flex;
     justify-content: center;
     align-content: center;
 }
-.sectionTwo-content h1{
+
+.sectionTwo-content h1 {
     margin-top: 55px;
     font-size: 2.5rem;
     font-weight: bolder;
 }
+
 .sectionTwo-content p {
     color: rgb(102, 102, 102);
     font-size: 1.2rem;
     font-weight: bolder;
 }
 
-.sectionTwo-table{
+.sectionTwo-table {
     margin: 0 auto;
     margin-top: 60px;
     width: 80%;
@@ -160,16 +179,19 @@
     text-align: center;
 }
 
-.sectionTwo-table thead{
+.sectionTwo-table thead {
     color: black;
 }
+
 .sectionTwo-table tbody {
     color: grey;
 }
-.sectionTwo-table img{
+
+.sectionTwo-table img {
     height: 25px;
 }
-.sectionTwo-table table{
+
+.sectionTwo-table table {
     border: 1.5px solid rgba(37, 193, 111, 0.3);
     border-top-width: 1px;
     border-top-style: solid;
@@ -177,142 +199,182 @@
     border-radius: 10px;
 }
 
-.sectionThree{
-    height: 400px;
+/* ------------------------------------ */
+
+
+.sectionThree {
+    min-height: 400px;
     background-color: #f3fcf7;
 }
+
 .sectionThree-title {
     padding-top: 45px;
 }
-.sectionThree-title h1{
+
+.sectionThree-title h1 {
     font-size: 2rem;
     font-weight: 700;
     text-align: center;
 }
 
-.sectionThree-content{
+.sectionThree-content {
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: center;
     text-align: center;
     align-content: center;
     padding: 50px 100px;
+    color: rgb(77, 77, 77);
+}
 
-}
-.sectionThree-content img{
-    height: 70px;
-    width: 70px;
-    padding-bottom: 20px;
-}
-.sectionThree-content div{
-    margin: 0 30px;
-    color: rgb(77, 77, 77);
-}
-.sectionThree-content div h4{
-    font-weight: bold;
-}
-.sectionThree-content div p {
-    font-weight: 300;
-    color: rgb(77, 77, 77);
-}
-.sectionThree .btn {
+.sectionThree-content img {
     position: relative;
     left: 50%;
-    top: 15px;
+    transform: translateX(-50%);
+    height: 100px;
+    width: 100px;
+    padding-bottom: 20px;
+}
+
+.button-3 {
+    position: relative;
+    left: 50%;
+    bottom: 0;
     transform: translateX(-50%);
     padding: 10px 20px;
 }
-.sectionFour{
-    height: 700px;
+
+
+/* ----------------------------------- */
+
+.sectionFour {
+    min-height: 800px;
     position: relative;
 }
 
-.sectionFour h1{
-    margin-top: 80px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2.5rem;
-    font-weight: bold;
+.sectionFour-title h1 {
+    position: relative;
+    top: 40px;
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
 }
 
-.sectionFour-pop{
+.sectionFour-pop {
     background-color: white;
-    height: 400px;
+    min-height: 400px;
     position: absolute;
     margin: 0 auto;
-    top: 80px;
+    padding-top: 20px;
+    top: 20%;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    flex-wrap: wrap;
     box-shadow: 5px 10px 8px 5px #888888;
-   
 }
 
-.sectionFour-header img {
-    height: 100px;
-    width: 200px;
-    margin: 0 50px;
-    margin-right: 50px;
+#left-icon {
+    position: absolute;
+    left: 5%;
+    top: 10%;
 }
 
+#right-icon {
+    position: absolute;
+    right: 5%;
+    top: 10%;
+}
 
-.sectionFour-pop p{
+.fa {
+    color: #9df3c4;
+}
+
+.sectionFour-pop p {
     padding: 20px;
     font-size: 1.2rem;
     font-weight: bold;
     font-style: italic;
     text-align: center;
-    color:rgb(77, 77, 77);
+    color: rgb(77, 77, 77);
 }
 
-hr{
+.signature {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    padding-bottom: 20px;
+}
+
+.signature hr {
     width: 150px;
-    background-color: rgb(37, 193, 111);
+    border-top: 2px solid rgb(37, 193, 111);
 }
 
 
-.sectionFive{
-  
+
+.sectionFive {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding-bottom:200px;
-    margin-bottom: 0px;
+    padding-bottom: 200px;
+    margin-bottom: 0;
+
 }
 
-.sectionFive h1{
+.customer-logo {
+    margin: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.customer-logo img {
+    padding: 0 25px;
+}
+
+
+
+.sectionFive h1 {
     font-size: 2.5rem;
-  
+
 }
+
 .sectionFive .h2 {
-   margin: 20px;
-    
+    margin: 20px;
+
 }
-ul{
-   list-style: none;
+
+ul {
+    list-style: none;
 }
-.end ul{
+
+.end ul {
     display: flex;
     justify-content: flex-start;
     flex-direction: row;
     align-items: center;
     padding: 10px;
+
 }
-.end ul li{
+
+.end ul li {
     margin: 5px;
 }
 
-.end{
+.end {
     display: flex;
     justify-content: space-around;
     align-items: center;
     background-color: rgb(230, 230, 230);
     color: rgb(102, 102, 102);
-    margin-top: 20px;
+    padding-top: 30px;
     font-weight: bold;
-    padding-top: 10px;
+    margin-top: 0;
 }
