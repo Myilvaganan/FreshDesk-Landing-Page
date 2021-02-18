@@ -2,7 +2,7 @@ const contentUp = document.querySelector(".content-up");
 const contentDown = document.querySelector(".content-down");
 const logo = document.querySelector(".logo img");
 
-const sectionOneOptions = { rootMargin: "-350px 0px 0px 0px" };
+const sectionOneOptions = { rootMargin: "-250px 0px 0px 0px" };
 
 const sectionOneObserver = new IntersectionObserver(function (
   entries,
