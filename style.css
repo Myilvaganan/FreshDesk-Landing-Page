@@ -8,18 +8,51 @@
         display: none;
     }
 
+    .content-up .logo img {
+        margin: 0 50px;
+        width: 150px;
+        height: 55px;
+    }
+
+
     .content-up {
         display: flex;
         justify-content: space-evenly;
         align-content: center;
     }
 
-    .content-up .logo img {
-        width: 150px;
-        height: 55px;
+    h1 {
+        font-size: 2rem !important;
     }
+
+    .sectionOne .button {
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+
+
 }
 
+
+@media only screen and (max-width: 960px) {
+    .end .end-list {
+        display: none !important;
+    }
+
+    .end {
+        font-size: 1rem;
+    }
+
+}
+
+@media only screen and (max-width: 760px) {
+    .content-up button {
+        width: 100px !important;
+        height: 50px !important;
+        font-size: 0.8rem;
+        padding: 5px !important;
+    }
+}
 
 * {
     padding: 0;
@@ -141,6 +174,7 @@
     width: 100%;
     margin-bottom: 100px;
 
+
 }
 
 .sectionTwo .btn {
@@ -155,6 +189,7 @@ p {
     display: flex;
     justify-content: center;
     align-content: center;
+    text-align: center;
 }
 
 .sectionTwo-content h1 {
@@ -205,6 +240,7 @@ p {
 .sectionThree {
     min-height: 400px;
     background-color: #f3fcf7;
+    padding: 5%;
 }
 
 .sectionThree-title {
@@ -314,7 +350,9 @@ p {
     border-top: 2px solid rgb(37, 193, 111);
 }
 
-
+/* =============
+   SECTION FIVE
+   =============*/
 
 .sectionFive {
     display: flex;
@@ -327,29 +365,32 @@ p {
 }
 
 .customer-logo {
-    margin: 80px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    width: 80%;
+    padding-top: 50px;
+    padding-bottom: 50px;
 
 }
 
 .customer-logo img {
-    padding: 0 25px;
+    margin: 20px;
 }
 
 
 
 .sectionFive h1 {
     font-size: 2.5rem;
-
+    text-align: center;
 }
 
 .sectionFive .h2 {
     margin: 20px;
-
 }
+
+
 
 ul {
     list-style: none;
@@ -374,7 +415,7 @@ ul {
     align-items: center;
     background-color: rgb(230, 230, 230);
     color: rgb(102, 102, 102);
-    padding-top: 30px;
+    padding-top: 10px;
     font-weight: bold;
-    margin-top: 0;
+    margin: 0;
 }
