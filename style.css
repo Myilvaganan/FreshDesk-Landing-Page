@@ -92,6 +92,12 @@
     color: white !important;
 }
 
+.btn:hover, .btn:active {
+    background-color: rgb(36, 228, 164) !important;
+    color:black !important;
+    transition: all .2s ease-in-out;
+}
+
 .logo img {
     width: 138px;
     height: 25px;
