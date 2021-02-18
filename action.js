@@ -68,6 +68,7 @@ showTickets.addEventListener("click", () => {
         row.setAttribute("class", "table-row");
         var rowHead = document.createElement("th");
         var rowData1 = document.createElement("td");
+        rowData1.setAttribute("class", "font-weight-bold");
         var rowData2 = document.createElement("td");
         var rowData3 = document.createElement("td");
         var rowData4 = document.createElement("td");
